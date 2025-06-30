@@ -1,13 +1,13 @@
-# REVIEW MEETING GUIDELINES
+# REVIEW MEETING PROCESS GUIDELINES
 
 - Version 2.0
 - Prepared by: Robert W. Leach
 
 ## PURPOSE
 
-**Understanding Review Issues**: A primary purpose of a review meeting is to ensure that the document author understands the review issues created by reviewers.
+**Understanding Review Issues**: A primary purpose of a review meeting is to ensure that the author understands the review issues created by reviewers.
 
-**Understanding the Documents**: A second primary purpose of a review meeting is to ensure that the reviewer understands the document content enough to be able to identify defects in a document.
+**Understanding the Changes**: A second primary purpose of a review meeting is to ensure that the reviewer understands the changes enough to be able to identify defects.
 
 **Generally**: The general purpose of the review meeting is not to determine *how* to resolve an issue, but rather to define *what* an issue is.
 
@@ -29,11 +29,11 @@ A review meeting is useful when the review process has stalled.
 
 A review meeting entails the following topics.
 
-- The understanding of perceived defects in the document(s).
+- The understanding of perceived defects in the changes.
 - The understanding of suggested defect fixes (if any).
-- The understanding of the content of the document(s).
+- The understanding of the content of the changes.
 
-The following are outside the scope of a document review.
+The following are outside the scope of a review meeting.
 
 - Underlying requirements and design.^1
 - Over-arching project-level topics.^2
@@ -73,11 +73,11 @@ The reviewer is the bulwark of quality assurance.  They own the review issues th
 
 - Communicate defects to the author.
 - Ensure the author understands every reported defect enough to address it.
-- Understand the reviewed documents enough to find defects.
+- Understand the reviewed changes enough to find defects.
 
 #### REVIEWER LIMITATIONS
 
-A review meeting is limited to understanding changed documents and review issues.  It is not the reviewer's responsibility to:
+A review meeting is limited to understanding changes and review issues.  It is not the reviewer's responsibility to:
 
 - Make suggestions about how to address a review issue.
 - Reject a merge request or change request.
@@ -86,9 +86,9 @@ A review meeting is limited to understanding changed documents and review issues
 #### REVIEWER ACTIONS
 
 - Request time extensions from the CM Leader if unable to complete a review before a review meeting.
-- Describe each defect they found during their independent review of the reviewed documents.
+- Describe each defect they found during their independent review of the changes.
 - Answer questions the author asks to help them understand the review issue.
-- Ask for clarifications of document content, when unclear.
+- Ask for clarifications of changes, when unclear.
 
 ### AUTHOR
 
@@ -99,19 +99,19 @@ The author is the owner of the implementation/changes and is the only one who is
 The author's responsibility is as it pertains to addressing defects reported by reviewers.  The author's responsibilities during a review meeting are to:
 
 - Understand all defects reported by reviewers enough to address them.
-- Ensure reviewers understand the reviewed documents enough to find defects.
+- Ensure reviewers understand the changes enough to find defects.
 
 #### AUTHOR LIMITATIONS
 
-A review meeting is limited to understanding changed documents and review issues.  It is not the reviewer's responsibility to:
+A review meeting is limited to understanding changes and review issues.  It is not the reviewer's responsibility to:
 
 - Explain how they intend to address a review issue.
 - Reject a review issue.
-- Defend a change in the reviewed documents.
+- Defend a change.
 
 #### AUTHOR ACTIONS
 
-- Answer reviewer questions about the content of the document(s).
+- Answer reviewer questions about the content of the changes.
 - Ask for clarifications about reported defects, if unclear.
 
 ## CONTEXT
@@ -120,20 +120,21 @@ The following describes the overall context surrounding a code review meeting to
 
 ### SOFTWARE ENGINEERING PHASES
 
-This document is a part of the SCMP (Software Configuration Management Plan).  It is created by the CM Leader at the very start of a project.
+This document is a part of the SCMP (Software Configuration Management Plan).  It is created by the CM Leader at the start of a project.
 
 1. Planning
    - Software Project Management Plan (SPMP)
-   - Software Configuration Management Plan (SCMP)  **WE ARE HERE**
+   - Software Configuration Management Plan (SCMP)
    - Software Quality Assurance Plan (SQAP)
    - Software Testing Plan (STP)
 2. Requirements
 3. Design
 4. Implementation
 5. Testing
-6. Maintenance
+6. Quality Assurance  **WE ARE HERE**
+7. Maintenance
 
-### CHANGE CONTROL PROCESS
+### CHANGE CONTROL PROCESS (QUALITY ASSURANCE PHASE)
 
 Each step described here is dependent on the steps before it.  The process for each step should be described in the SCMP, e.g. the process by which a change request is approved.  This document does not describe the processes outside the scope of a review meeting.
 
@@ -141,35 +142,35 @@ The overall process starts with a "Change Request" / "Issue".  Each change reque
 
 1. Change request submitted
 2. Change request review process
-3. Change request approved^6 (if rejected, stop here)
+3. Change request approved^3 (if rejected, stop here)
 4. Change request taken by an author (a.k.a. "developer")
-5. Author works on the document design^7
+5. Author works up a design^4
 6. Author requests design review
 7. Design review process
 8. Design approved (if rejected, return to step 5)
-9. Author works on the document ("Implementation")
-10. Author requests document review
-11. Independent document review process  (See the INDEPENDENT DOCUMENT REVIEW PROCESS section)
+9. Author works on the changes ("Implementation")
+10. Author requests independent review
+11. Independent review process
 12. Request a review meeting (if necessary)
 13. Schedule a review meeting (if necessary)
 14. Review meeting (if necessary)  **WE ARE HERE**
-15. Document approved (if rejected, return to step 9)
-16. Document merged into the repository
+15. Changes approved (if rejected, return to step 9)
+16. Changes merged into the repository
 
 ## REVIEW MEETING PROCESS
 
-An author or reviewer can request the CM to schedule a review meeting if they are unclear or confused about a review issue or a document being reviewed and believe that the pull request interface is inadequate to the task of communicating the details.  The CM leader may schedule a review meeting at their discretion.  When that meeting takes place, it will proceed with the following process.
+An author or reviewer can request the CM to schedule a review meeting if they are unclear or confused about a review issue or the changes being reviewed and believe that the pull request interface is inadequate to the task of communicating the details.  The CM leader may schedule a review meeting at their discretion.  When that meeting takes place, it will proceed with the following process.
 
-1. The CM leader starts the document review and designated each reviewer, one by one to go through their unresolved issues.
+1. The CM leader starts the review meeting and calls on each reviewer, one by one, to go through their unresolved issues.
 2. For each reviewer issue:
    1. The reviewer:
       - Describes a review issue issue or
-      - Asks a question to clear up confusion they have about a document
+      - Asks a question to clear up confusion they have about a changes
       - Responds to any question the author posed about confusion they have about the issue
    2. The author:
       - May indicate that they understand the issue
       - May ask a question to clear up confusion about the review issue
-      - Responds to any question the reviewer posed about confusion they have about the document
+      - Responds to any question the reviewer posed about confusion they have about the changes
    3. The CM leader may interject at any point to:
       - Declare a topic/discussion _Beyond Meeting Scope_^3
       - Declare a topic/discussion _Beyond Document Scope_^4
@@ -181,13 +182,13 @@ After the meeting, the review/re-review process continues, but the CM may take a
 
 ## FOOTNOTES
 
-1. _Unless the document(s) being reviewed are requirements or design documents, all planning leading up to the implementation of a document are beyond the scope of a document review.  If any such defect arises during a review meeting, the parties broaching the issue will be directed by the CM leader to create an issue to be addressed as a change request._
+1. _Unless the changes being reviewed are requirements or design, all planning leading up to the implementation of a change request are beyond the scope of a review meeting.  If any such defect arises during a review meeting, the parties broaching the issue will be directed by the CM leader to create an issue to be addressed as a change request._
 2. _Defects involving project-level topics such as project planning, principles, conventions, general requirements, etc. are beyond the scope of a review meeting._
-3. _If interactions between meeting members strays beyond the reviewer conveying defects found during their review, or a clarification of document content, the CM Leader may declare the topic "beyond meeting scope" and either direct the reviewer to advance to the next issue or re-orient the discussion back toward the identification of the reviewer's interpretation of defects and ensure that the defect pointed out is understood by the developer._
-4. _If the CM Leader determines that the discussion of an issue has gone beyond the scope of the document, the CM Leader may declare the topic "beyond document scope" and either direct the reviewer to advance to the next issue or re-orient the discussion back toward the identification of the reviewer's interpretation of defects and ensure that the defect pointed out is understood by the developer._
+3. _If interactions between meeting members strays beyond the reviewer conveying defects found during their review, or a clarification of the changes, the CM Leader may declare the topic "beyond meeting scope" and either direct the reviewer to advance to the next issue or re-orient the discussion back toward the identification of the reviewer's interpretation of defects and ensure that the defect pointed out is understood by the author._
+4. _If the CM Leader determines that the discussion of an issue has gone beyond the scope of the changes in the documents, the CM Leader may declare the topic "beyond document scope" and either direct the reviewer to advance to the next issue or re-orient the discussion back toward the identification of the reviewer's interpretation of defects and ensure that the defect pointed out is understood by then author._
 5. _If the CM Leader determines that a discussion, while productive, may be more effectively/efficiently addressed outside of the meeting, he/she may suggest that the topic be discussed after the meeting and direct the reviewer to advance to the next issue._
-6. _The change request approval process should involve prioritization and estimation of cost that govern when an issue is available to be taken up by a developer._
-7. _For the purposes of succinctness, "design" encompasses requirements, limitations, assumptions, affected components, etc.  I.e. everything in the "Issue Owner" section of the Issue template._
+6. _The change request approval process should involve prioritization and estimation of cost that govern when an issue is available to be taken up by an author._
+7. _For the purposes of succinctness, "design" encompasses requirements, limitations, assumptions, affected components, etc._
 
 ## REFERENCES
 
