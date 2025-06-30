@@ -1,4 +1,4 @@
-# REVIEW MEETING PROCESS GUIDELINES
+# REVIEW MEETING GUIDELINES
 
 - Version 2.0
 - Prepared by: Robert W. Leach
