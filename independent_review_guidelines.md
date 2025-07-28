@@ -94,7 +94,7 @@ The reviewer is the bulwark of quality assurance.  They own the review issues th
 
 #### REVIEWER RESPONSIBILITIES
 
-It is the reviewer's overall responsibility to work with the author are toward the common goal of satisfying the requirements of merging the implementation of approved change requests with as few defects as possible.
+It is the reviewer's overall responsibility to work with the author toward the common goal of satisfying the requirements of merging the implementation of approved change requests with as few defects as possible.
 
 The reviewer's independent review responsibilities are to:
 
@@ -104,14 +104,14 @@ The reviewer's independent review responsibilities are to:
   See the DEFECT section under DEFINITIONS for how to identify a defect.
 - Describe defects to the author to a degree that enables the author to address them.
 - Upon re-review request, respond to the author's attempts to address reported review issues within the time period set by the CM Leader (or request more time).
-- Work with the author toward resolving review issues and the common goal of satisfying the approved change request.
+- Work with the author toward resolving review issues toward the common goal of satisfying the approved change request.
 - If a defect is outside the scope of the issue for which the work was done, it is the reviewer's responsibility to create new issues to refactor any work merged from the current issue.  Any such issue is subject to the change request approval process.
 
 #### REVIEWER LIMITATIONS
 
-(Despite the GitHub Pull Request interface's Approve/reject mechanism, which applies to pull requests originating from non-team members who are not subject to the change control processes described in this document...) It is not the reviewer's responsibility to reject a change request or prevent the completion of the work on an issue.  The reviewer is not expected to:
+(Despite the GitHub Pull Request interface's approve/reject mechanism, which applies to pull requests originating from non-team members who are not subject to the change control processes described in this document) it is not the reviewer's responsibility to reject a change request or prevent the completion of the work on an issue.  The reviewer is not expected to take any of the following actions:
 
-- While it helps to understand the context of a change, it is not necessary for a reviewer to understand unchanged code surrounding the changes in a pull request in order to complete a review.  If knowledge about code not involved in the change request is necessary to find defects, the reviewer is expected to create a _question_ review issue.
+- While it helps to understand the context of a change, it is not necessary for a reviewer to understand unchanged code surrounding the changes in a pull request in order to complete a review.  If knowledge about code not involved in the change request is necessary to find defects in the changed code, the reviewer must create a _question_ review issue.
 - While it helps to find bugs, it is not necessary for a reviewer to run the code or run the tests, especially if continuous integration testing is a part of the pull request.
 - Perform work on the changed documents in question to resolve defects in the author's code.
 - Create new change requests to resolve defects in the author's code (unless the defect relates to different interpretations of existing requirements or undocumented requirements).
@@ -256,7 +256,7 @@ Review issues are created by reviewers during the independent review period.  Th
 - **Question**
   - A _question_ review issue should be asked when a reviewer needs information to be able to find defects (in a subsequent re-review), e.g. "What is the return type of this method call?"
 
-Every review issue must include:
+Every review issue includes:
 
 - Document name and line numbers (line numbers may only be omitted when the defect regards file presence, location, or name)
 - Severity (Blocking/Non-blocking/Question)
@@ -358,6 +358,11 @@ A defect that is outside the scope of an independent review and should result in
   Examples of such problems may include, but are not limited to:
   - An omission in the issue requirements.
   - A logic flaw in the design that excludes an edge case.
+
+If a reviewer _feels_ like there is something wrong but they are not quite sure, e.g. reviewed changes _suggest_ an issue exists in unreviewed code, identifying a _potential_ defect in a review issue is outside the scope of the review.  That is not to say that potential issues cannot be investigated.  There are a couple potential remedies:
+
+- Create a review issue question to help identify a real defect (e.g. find out if a new function alleviates a symptom instead of solving a real problem).
+- Create a GitHub issue (not review issue) to investigate a suspected defect.
 
 ### CHANGE REQUEST (A.K.A. A GITHUB "ISSUE")
 
