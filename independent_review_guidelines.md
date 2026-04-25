@@ -181,7 +181,7 @@ The CM Leader reserves the right to step in on the resolution of any reported de
 The following describes the general overall context surrounding the independent review process to contextualize the point when an independent review occurs.
 
 ### SOFTWARE ENGINEERING PHASES
-<!-- jscpd:ignore-start -->
+
 1. Planning
    - Software Project Management Plan (SPMP)
    - Software Configuration Management Plan (SCMP)
@@ -193,7 +193,7 @@ The following describes the general overall context surrounding the independent 
 5. Testing
 6. Quality Assurance  **WE ARE HERE**
 7. Maintenance
-<!-- jscpd:ignore-end -->
+
 ### CHANGE CONTROL PROCESS (QUALITY ASSURANCE PHASE)
 
 Each step described here is dependent on the steps before it.  The process for each step should be described in the SCMP, e.g. the process by which a change request is approved.  This document does not describe the processes outside the scope of an independent review.
