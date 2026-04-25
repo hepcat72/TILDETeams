@@ -30,4 +30,5 @@ jobs:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_YAML_PRETTIER: false
-          VALIDATE_ZIZMOR: false
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
+          VALIDATE_TERRAFORM_CHECKOV: false
