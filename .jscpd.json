@@ -1,7 +1,5 @@
 {
 	"minLines": 15,
 	"minTokens": 80,
-	"ignore": [
-		"**/.github/**"
-	]
+	"ignore": ["**/.github/**"]
 }
