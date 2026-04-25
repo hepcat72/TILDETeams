@@ -13,7 +13,7 @@
 
 ## GOALS
 
-**Facillitate Implementation**: The independent review process is meant to facilitate updates to the changed document(s) to ensure that an approved change request is implemented with as few defects as possible.
+**Facilitate Implementation**: The independent review process is meant to facilitate updates to the changed document(s) to ensure that an approved change request is implemented with as few defects as possible.
 
 **Change Control**: The independent review process is a component of curtailing uncontrolled change.  Controlling change leads to a reduction of defects, increases reliability, and contributes to accurate estimates of project costs.
 
@@ -48,7 +48,8 @@ For context, this is a list of processes intended to handle the following exampl
   - The changes in a PR don't satisfy a requirement in the change request.
   - A change in the PR is not a part of the requirements in the change request.
 
-How a change is implemented, whether it is a design review or code review, is completely at the discretion of the author, as long as it meets the requirements.  A design *informs* the code implementation, but does not constrain it.  Designs (and design reviews) are worthwhile because the earlier in the process a defect is found, the cheaper it is to fix.  The scope of either review (design or code) is only as it pertains to the requirements of the change request.
+How a change is implemented, whether it is a design review or code review, is completely at the discretion of the author, as long as it meets the requirements.  A design *informs* the code implementation, but does not constrain it.  Designs (and design reviews) are worthwhile because the earlier in the process a defect is found, the cheaper it is to fix.
+The scope of either review (design or code) is only as it pertains to the requirements of the change request.
 
 The independent review process entails the following topics.
 
@@ -111,7 +112,7 @@ The reviewer's independent review responsibilities are to:
 
 (Despite the GitHub Pull Request interface's approve/reject mechanism, which applies to pull requests originating from non-team members who are not subject to the change control processes described in this document) it is not the reviewer's responsibility to reject a change request or prevent the completion of the work on an issue.  The reviewer is not expected to take any of the following actions:
 
-- While it helps to understand the context of a change, it is not necessary for a reviewer to understand unchanged code surrounding the changes in a pull request in order to complete a review.  If knowledge about code not involved in the change request is necessary to find defects in the changed code, the reviewer must create a _question_ review issue.
+- While it helps to understand the context of a change, it is not necessary for a reviewer to understand unchanged code surrounding the changes in a pull request in order to complete a review.  If knowledge about code not involved in the change request is necessary to find defects in the changed code, the reviewer must create a *question* review issue.
 - While it helps to find bugs, it is not necessary for a reviewer to run the code or run the tests, especially if continuous integration testing is a part of the pull request.
 - Perform work on the changed documents in question to resolve defects in the author's code.
 - Create new change requests to resolve defects in the author's code (unless the defect relates to different interpretations of existing requirements or undocumented requirements).
@@ -172,7 +173,7 @@ The CM Leader reserves the right to step in on the resolution of any reported de
 5. Request review.
 6. Wait for all reviewers to submit their independent reviews.
 7. Respond to and address every review issue (See the RESPONDING TO A REVIEW ISSUE section).
-8. Go back to step 5 untill all review issues are resolved or request the CM to schedule a review meeting.
+8. Go back to step 5 until all review issues are resolved or request the CM to schedule a review meeting.
 9. Request a review meeting to resolve an impasse with a reviewer.
 
 ## PROCESS
@@ -218,7 +219,8 @@ This process starts with a "Change Request" / "Issue".  Each change request is a
 
 ### INDEPENDENT REVIEW PROCESS
 
-An independent review is a line-by-line review of changes to be merged into the project.  At this point, the change request and design have been approved.  The purpose of the independent review is to suss out defects in the implementation and ensure adherence to the requirements.  An implementation does **not** have to follow the design in the change request or follow the suggestions of the reviewers, but the changes do have to meet the specific requirements in the change request and project's documented general requirements.
+An independent review is a line-by-line review of changes to be merged into the project.  At this point, the change request and design have been approved.  The purpose of the independent review is to suss out defects in the implementation and ensure adherence to the requirements.
+An implementation does **not** have to follow the design in the change request or follow the suggestions of the reviewers, but the changes do have to meet the specific requirements in the change request and project's documented general requirements.
 
 1. Author requests an independent review (or re-review)
 2. Independent review period.^5  The reviewer:
@@ -241,20 +243,20 @@ An independent review is a line-by-line review of changes to be merged into the 
 Review issues are created by reviewers during the independent review period.  There are 3 types of review issues:
 
 - **Defect** (See DEFECT in the DEFINITIONS section.)
-  - A _defect_ must be related to a specific reviewed document.
+  - A *defect* must be related to a specific reviewed document.
   - A defect should be described to an extent that enables the author to fix it.
   - Reviewers work with the author to agree on a resolution to the review issues.
   - Blocking review issues can only be resolved by the reviewer.
 - **Unrelated**
-  - An _unrelated_ review issue is when changes are unrelated to the issue requirements, i.e. "feature creep".
+  - An *unrelated* review issue is when changes are unrelated to the issue requirements, i.e. "feature creep".
     - The change request does not mention them.
     - Feature creep is a source of uncontrolled change.
     - All changes should go through the change request approval process.
   - Exceptions:
-    - This excludes any business rules such as applying newly changed coding convention constraints to pre-existing content, e.g. updating docstring formats of code unrelated to the issue, but note that such buisness rules should be documented.
+    - This excludes any business rules such as applying newly changed coding convention constraints to pre-existing content, e.g. updating docstring formats of code unrelated to the issue, but note that such business rules should be documented.
     - Trivial/minor changes, or ancillary unrelated changes should be a judgement call.
 - **Question**
-  - A _question_ review issue should be asked when a reviewer needs information to be able to find defects (in a subsequent re-review), e.g. "What is the return type of this method call?"
+  - A *question* review issue should be asked when a reviewer needs information to be able to find defects (in a subsequent re-review), e.g. "What is the return type of this method call?"
 
 Every review issue includes:
 
@@ -266,7 +268,8 @@ Every review issue includes:
 
 The author and reviewer work together on each issue to successfully agree on a resolution.  The author and reviewer go back and forth to resolve each review issue.
 
-The author addresses/responds-to all unresolved review issues after all reviewers have submitted their independent reviews (to prevent outstanding review work from reviewing stale code) and the reviewer responds once re-review has been requested.  Both the author and reviewer must respond to every unresolved review issue before re-requesting or submitting a review.  It is a conversation working toward a mutually agreeable resolution.
+The author addresses/responds-to all unresolved review issues after all reviewers have submitted their independent reviews (to prevent outstanding review work from reviewing stale code) and the reviewer responds once re-review has been requested.
+Both the author and reviewer must respond to every unresolved review issue before re-requesting or submitting a review.  It is a conversation working toward a mutually agreeable resolution.
 
 The author is the owner of the changes and is the only one who can make changes.
 
@@ -288,12 +291,12 @@ There are 5 types of proposed responses to review issues:
     - may elect to create a change request(/issue) to implement a fix, and resolve a non-blocking review issue.
     - may elect to create a change request(/issue) to implement a fix to a blocking review issue, but must convince the reviewer why doing so is worthwhile.
     - should comment with a link in a review issue response.
-    - may resolve unblocking deffered issues.
+    - may resolve unblocking deferred issues.
   - The reviewer:
     - resolves deferred review issues if they are an acceptable resolution
     - explains why deferral is an insufficient resolution.
 - **Invalid**
-  - Marking a review issue as _invalid_ is a _suggestion_ by the author that a review issue is _not_ an issue
+  - Marking a review issue as *invalid* is a *suggestion* by the author that a review issue is *not* an issue
   - If a review issue marked as invalid is blocking, only the reviewer (or CM) can resolve the issue.
   - Examples of an acceptable reason for marking a review issue as "invalid":
     - The defect is not a defect.  This may be due to a misunderstanding of the changes, the change request, or of the requirements.
@@ -306,7 +309,7 @@ There are 5 types of proposed responses to review issues:
     - may cite any related requirement and explain how the changes satisfy it.
   - The reviewer:
     - may agree and resolve the issue.
-    - may reject a suggestion that a review issue is _invalid_, but must make a case to the author as to why it is valid.
+    - may reject a suggestion that a review issue is *invalid*, but must make a case to the author as to why it is valid.
     - is obliged to help the author understand the issue.
     - may cite any related requirement and explain how the changes do not satisfy it.
 - **Wontfix**
@@ -315,7 +318,7 @@ There are 5 types of proposed responses to review issues:
     - may mark any review issue as "wontfix", but must make a case to the reviewer if the review issue is blocking.
     - may mark the review issue as resolved if it is non-blocking.
   - The reviewer
-    - may resolve a _wontfix_ review issue if they have been convinced that a fix is not worth the effort.
+    - may resolve a *wontfix* review issue if they have been convinced that a fix is not worth the effort.
     - may reject a suggestion that a review issue should not be fixed, but must make a case to the author as to why it is a blocking issue.
 - **Answer**
   - E.g. The author attempts to answer a reviewer's question.
@@ -359,12 +362,12 @@ A defect that is outside the scope of an independent review and should result in
   - An omission in the issue requirements.
   - A logic flaw in the design that excludes an edge case.
 
-If a reviewer _feels_ like there is something wrong but they are not quite sure, e.g. reviewed changes _suggest_ an issue exists in unreviewed code, identifying a _potential_ defect in a review issue is outside the scope of the review.  That is not to say that potential issues cannot be investigated.  There are a couple potential remedies:
+If a reviewer *feels* like there is something wrong but they are not quite sure, e.g. reviewed changes *suggest* an issue exists in unreviewed code, identifying a *potential* defect in a review issue is outside the scope of the review.  That is not to say that potential issues cannot be investigated.  There are a couple potential remedies:
 
 - Create a review issue question to help identify a real defect (e.g. find out if a new function alleviates a symptom instead of solving a real problem).
 - Create a GitHub issue (not review issue) to investigate a suspected defect.
 
-### CHANGE REQUEST (A.K.A. A GITHUB "ISSUE")
+### CHANGE REQUEST (a.k.a. A GitHub "Issue")
 
 Not to be confused with a "review issue", a "change request" is a request to make a change to the repository or to any project component.  It can describe a bug or feature pertaining to code, documentation, process, plan, or any other project component.
 
@@ -390,22 +393,23 @@ A change request is subject to approval.  Once approved, it is available to be t
 
 Once the plans for each of these categories is filled in, the design is subject to review, to be approved for implementation.
 
-### MERGE REQUEST (A.K.A. A GITHUB "PULL REQUEST")
+### MERGE REQUEST (a.k.a. A GitHub "Pull Request")
 
 A merge request is a request to incorporate added, removed, or changed documents into the repository.  A merge request comes about after an issue has been accepted for work and undergone successful design review.  A merge request is followed by a review request once the changes pass continuous integration tests.
 
 ## FOOTNOTES
 
-1. _Unless the changes being reviewed are requirements or design, all planning leading up to the implementation of a change request are beyond the scope of an independent review.  If any such defect arises during an independent review, the parties broaching the issue will be directed by the CM leader to create an issue to be addressed as a change request._
-2. _Defects involving project-level topics such as project planning, principles, conventions, general requirements, etc. are beyond the scope of an independent review._
-3. _The change request approval process should involve prioritization and estimation of cost that govern when an issue is available to be taken up by a developer._
-4. _For the purposes of succinctness, "design" encompasses requirements, limitations, assumptions, affected components, etc._
-5. _Reviewers complete an independent review to ensure that the changes are free of defects.  Defects can include typos, logic errors, failures to satisfy: specific requirements from the change request or general project requirements.  See the DEFECT heading in the DEFINITIONS section._
-6. _Addressing an issue can involve new changes, responding to reviewer questions, suggesting an issue is invalid (with an explanation), or creating a separate change request to implement a fix._
-7. _If a review issue pertains to: requirements that are subjective or open to interpretation, subjective opinion, or are regarding unspecified requirements, an independent review is not the right forum to hash out such an issue.  The review process should proceed without delay.  The reviewer's recourse is to create a change request to address such an issue by changing the general requirements or any other component of the project._
+1. *Unless the changes being reviewed are requirements or design, all planning leading up to the implementation of a change request are beyond the scope of an independent review.  If any such defect arises during an independent review, the parties broaching the issue will be directed by the CM leader to create an issue to be addressed as a change request.*
+2. *Defects involving project-level topics such as project planning, principles, conventions, general requirements, etc. are beyond the scope of an independent review.*
+3. *The change request approval process should involve prioritization and estimation of cost that govern when an issue is available to be taken up by a developer.*
+4. *For the purposes of succinctness, "design" encompasses requirements, limitations, assumptions, affected components, etc.*
+5. *Reviewers complete an independent review to ensure that the changes are free of defects.  Defects can include typos, logic errors, failures to satisfy: specific requirements from the change request or general project requirements.  See the DEFECT heading in the DEFINITIONS section.*
+6. *Addressing an issue can involve new changes, responding to reviewer questions, suggesting an issue is invalid (with an explanation), or creating a separate change request to implement a fix.*
+7. *If a review issue pertains to: requirements that are subjective or open to interpretation, subjective opinion, or are regarding unspecified requirements, an independent review is not the right forum to hash out such an issue.  The review process should proceed without delay.*
+   *The reviewer's recourse is to create a change request to address such an issue by changing the general requirements or any other component of the project.*
 
 ## REFERENCES
 
-1. `document_review_form.txt` version 1.3 _from the TreeView3 project_
-2. `review_meeting_guidelines.txt` version 1.3 _from the TreeView3 project_
-3. `SCMP_TreeView3.doc` 8/14/2015 _from the TreeView3 project_
+1. `document_review_form.txt` version 1.3 *from the TreeView3 project*
+2. `review_meeting_guidelines.txt` version 1.3 *from the TreeView3 project*
+3. `SCMP_TreeView3.doc` 8/14/2015 *from the TreeView3 project*
