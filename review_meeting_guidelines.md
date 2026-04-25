@@ -119,7 +119,7 @@ A review meeting is limited to understanding changes and review issues.  It is n
 The following describes the overall context surrounding a code review meeting to contextualize the point when a review meeting occurs.
 
 ### SOFTWARE ENGINEERING PHASES
-
+<!-- jscpd:ignore-start -->
 This document is a part of the SCMP (Software Configuration Management Plan).  It is created by the CM Leader at the start of a project.
 
 1. Planning
@@ -133,7 +133,7 @@ This document is a part of the SCMP (Software Configuration Management Plan).  I
 5. Testing
 6. Quality Assurance  **WE ARE HERE**
 7. Maintenance
-
+<!-- jscpd:ignore-end -->
 ### CHANGE CONTROL PROCESS (QUALITY ASSURANCE PHASE)
 
 Each step described here is dependent on the steps before it.  The process for each step should be described in the SCMP, e.g. the process by which a change request is approved.  This document does not describe the processes outside the scope of a review meeting.
