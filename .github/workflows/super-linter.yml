@@ -34,7 +34,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JSCPD_CONFIG_FILE: ".jscpd.json"
+          LINTER_RULES_PATH: .github/linters
+          VALIDATE_JSON_PRETTIER: false
           VALIDATE_YAML_PRETTIER: false
           VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
           VALIDATE_CHECKOV: false
